@@ -5,8 +5,9 @@
 
 int main(int argc, char* argv[])
 {
-	int n = 0, maxa = 0, mina = 0, i = 0;
-	int* arr;
+	int n = 0, i = 0;
+	double maxa = 0, mina = 0;
+	double* arr;
 	FILE* f;
 
 	srand(time(NULL));
@@ -22,7 +23,7 @@ int main(int argc, char* argv[])
 	maxa = atoi(argv[3]);
 
 	CreateArr(n, &arr);
-	Gen(n, arr, maxa, mina);
+	Gen(n, arr, mina, maxa);
 
 	f = fopen(argv[4], "w");
 	PrintFile(f, n, arr);
