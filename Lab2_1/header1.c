@@ -4,13 +4,13 @@
 
 #pragma warning(disable : 4996)
 
-void CreateArr(int size, int** m)
+void CreateArr(int size, long int** m)
 {
 	if (size > 0)
-		*m = (int*)malloc(size * sizeof(int));
+		*m = (long int*)malloc(size * sizeof(long int));
 }
 
-void Gen(int size, int* m, int maxa, int mina)
+void Gen(int size, long int* m, long int maxa, long int mina)
 {
 	int i = 0;
 	for (i = 0; i < size; i++)
@@ -19,7 +19,7 @@ void Gen(int size, int* m, int maxa, int mina)
 	}
 }
 
-void Print(int size, int* m)
+void Print(int size, long int* m)
 {
 	int i = 0;
 	printf("N = %d\n", size);
@@ -27,7 +27,7 @@ void Print(int size, int* m)
 		printf("m[%d] = %d\n", i, m[i]);
 }
 
-void PrintFile(FILE* f, int size, int* m)
+void PrintFile(FILE* f, int size, long int* m)
 {
 	int i = 0;
 	fprintf(f, "%d\n", size);
