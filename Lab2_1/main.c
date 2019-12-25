@@ -26,6 +26,8 @@ int main(int argc, char* argv[])
 	Gen(n, arr, mina, maxa);
 
 	f = fopen(argv[4], "w");
+	if (f)
+		printf("File created successfully");
 	PrintFile(f, n, arr);
 	fclose(f);
 
